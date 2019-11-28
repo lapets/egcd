@@ -1,20 +1,13 @@
-###############################################################################
-## 
-## egcd.py
-## https://github.com/lapets/egcd
-##
-## Easy-to-import Python module with a basic, efficient, native implementation
-## of the extended Euclidean algorithm.
-##
-##
+"""Extended Euclidean algorithm.
+
+Easy-to-import Python module with a basic, efficient, native implementation
+of the extended Euclidean algorithm.
+"""
 
 import doctest
 
-###############################################################################
-##
-
 def egcd(b, n):
-    '''
+    """
     Given two integers (b, n), returns (gcd(b, n), a, m) such that
     a*b + n*m = gcd(b, n).
     
@@ -33,7 +26,7 @@ def egcd(b, n):
     >>> egcd(pow(2, 50), pow(3, 50))
     (1, -260414429242905345185687, 408415383037561)
 
-    '''
+    """
     (x0, x1, y0, y1) = (1, 0, 0, 1)
     while n != 0:
         (q, b, n) = (b // n, n, b % n)
@@ -43,5 +36,3 @@ def egcd(b, n):
 
 if __name__ == "__main__": 
     doctest.testmod()
-
-## eof
