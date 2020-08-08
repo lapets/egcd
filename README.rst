@@ -4,7 +4,9 @@ egcd
 
 Easy-to-import Python module with a basic, efficient, native implementation of the extended Euclidean algorithm.
 
-.. image:: https://badge.fury.io/py/egcd.svg
+|pypi|
+
+.. |pypi| image:: https://badge.fury.io/py/egcd.svg
    :target: https://badge.fury.io/py/egcd
    :alt: PyPI version and link.
 
@@ -17,3 +19,9 @@ The package is available on PyPI::
 The library can be imported in the usual way::
 
     from egcd import egcd
+
+Testing and Conventions
+-----------------------
+Style conventions are enforced using `Pylint <https://www.pylint.org/>`_::
+
+    pylint egcd

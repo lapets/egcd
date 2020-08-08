@@ -1,2 +1,2 @@
-# Allow users to build mr4mp values directly.
+"""Allow users to access the function directly."""
 from egcd.egcd import egcd
