@@ -34,4 +34,4 @@ def egcd(b, n):
     return (b, x0, y0)
 
 if __name__ == "__main__":
-    doctest.testmod()
+    doctest.testmod() # pragma: no cover
