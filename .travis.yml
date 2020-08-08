@@ -10,7 +10,10 @@ python:
 cache: pip
 install:
   - pip install pylint
+  - pip install coveralls
   - pip install .
 script:
   - pylint egcd
   - nosetests
+after_success:
+  - coveralls
