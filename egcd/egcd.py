@@ -25,6 +25,14 @@ def egcd(b, n):
     (2, 2437250447493, -2431817869532)
     >>> egcd(pow(2, 50), pow(3, 50))
     (1, -260414429242905345185687, 408415383037561)
+    >>> from math import gcd
+    >>> checks = []
+    >>> for (b, n) in [(b, n) for b in range(200) for n in range(200)]:
+    ...    (g, a, m) = egcd(b, n)
+    ...    checks.append(g == a*b + n*m)
+    ...    checks.append(g == gcd(b, n))
+    >>> all(checks)
+    True
     """
     (x0, x1, y0, y1) = (1, 0, 0, 1)
     while n != 0:
