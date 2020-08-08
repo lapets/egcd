@@ -4,11 +4,14 @@ egcd
 
 Easy-to-import Python module with a basic, efficient, native implementation of the extended Euclidean algorithm.
 
-|pypi|
+|pypi| |travis|
 
 .. |pypi| image:: https://badge.fury.io/py/egcd.svg
    :target: https://badge.fury.io/py/egcd
    :alt: PyPI version and link.
+
+.. |travis| image:: https://travis-ci.com/lapets/egcd.svg?branch=master
+    :target: https://travis-ci.com/lapets/egcd
 
 Package Installation and Usage
 ------------------------------

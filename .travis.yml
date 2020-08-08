@@ -1,0 +1,16 @@
+notifications:
+  email:
+    on_success: never
+    on_failure: always
+language: python
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+cache: pip
+install:
+  - pip install pylint
+  - pip install .
+script:
+  - pylint egcd
+  - nosetests
