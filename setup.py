@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setup(
     name="egcd",
-    version="0.0.1.1",
+    version="0.1.0",
     packages=["egcd",],
     install_requires=[],
     license="MIT",
