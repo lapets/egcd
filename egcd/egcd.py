@@ -1,21 +1,19 @@
-"""Extended Euclidean algorithm.
-
+"""
 Easy-to-import Python module with a basic, efficient, native implementation
 of the extended Euclidean algorithm.
 """
-
 import doctest
 
 def egcd(b, n):
     """
-    Given two integers (b, n), returns (gcd(b, n), a, m) such that
-    a*b + n*m = gcd(b, n).
+    Given two integers ``(b, n)``, returns ``(gcd(b, n), a, m)`` such that
+    ``a*b + n*m = gcd(b, n)``.
 
-    Adapted from several sources:
-      https://brilliant.org/wiki/extended-euclidean-algorithm/
-      https://rosettacode.org/wiki/Modular_inverse
-      https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm
-      https://en.wikipedia.org/wiki/Euclidean_algorithm
+    This implementation is adapted from the sources below:
+    * ``https://brilliant.org/wiki/extended-euclidean-algorithm/``
+    * ``https://rosettacode.org/wiki/Modular_inverse``
+    * ``https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm``
+    * ``https://en.wikipedia.org/wiki/Euclidean_algorithm``
 
     >>> egcd(1, 1)
     (1, 0, 1)
