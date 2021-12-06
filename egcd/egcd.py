@@ -2,9 +2,12 @@
 Easy-to-import Python module with a basic, efficient, native implementation
 of the extended Euclidean algorithm.
 """
+from __future__ import annotations
+from typing import Tuple
 import doctest
 
-def egcd(b, n):
+def egcd(b: int, n: int) -> Tuple[int, int, int]:
+    # pylint: disable=C0301
     """
     Given two integers ``(b, n)``, returns ``(gcd(b, n), a, m)`` such that
     ``a*b + n*m = gcd(b, n)``.
