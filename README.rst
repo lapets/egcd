@@ -11,14 +11,15 @@ Easy-to-import Python module with a basic, efficient, native implementation of t
    :alt: PyPI version and link.
 
 .. |travis| image:: https://travis-ci.com/lapets/egcd.svg?branch=master
-    :target: https://travis-ci.com/lapets/egcd
+   :target: https://travis-ci.com/lapets/egcd
 
 .. |coveralls| image:: https://coveralls.io/repos/github/lapets/egcd/badge.svg?branch=master
    :target: https://coveralls.io/github/lapets/egcd?branch=master
+   :alt: Coveralls test coverage summary.
 
 Package Installation and Usage
 ------------------------------
-The package is available on PyPI::
+The package is available on `PyPI <https://pypi.org/project/egcd/>`_::
 
     python -m pip install egcd
 
@@ -30,7 +31,8 @@ Testing and Conventions
 -----------------------
 All unit tests are executed and their coverage is measured when using `nose <https://nose.readthedocs.io/>`_ (see ``setup.cfg`` for configution details)::
 
-    nosetests
+    python -m pip install nose coverage
+    nosetests --cover-erase
 
 Alternatively, all unit tests are included in the module itself and can be executed using `doctest <https://docs.python.org/3/library/doctest.html>`_::
 
@@ -38,11 +40,12 @@ Alternatively, all unit tests are included in the module itself and can be execu
 
 Style conventions are enforced using `Pylint <https://www.pylint.org/>`_::
 
+    python -m pip install pylint
     pylint egcd
 
 Contributions
 -------------
-In order to contribute to the source code, open an issue or submit a pull request on the GitHub page for this library.
+In order to contribute to the source code, open an issue or submit a pull request on the `GitHub page <https://github.com/lapets/egcd>`_ for this library.
 
 Versioning
 ----------
