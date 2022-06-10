@@ -14,10 +14,14 @@ def egcd(b: int, n: int) -> Tuple[int, int, int]:
 
     This implementation is adapted from the sources below:
 
-    * `Extended Euclidean Algorithm <https://brilliant.org/wiki/extended-euclidean-algorithm/>`__ on `Brilliant.org <https://brilliant.org>`__,
-    * `Modular inverse <https://rosettacode.org/wiki/Modular_inverse>`__ on `Rosetta Code <https://rosettacode.org>`__,
-    * `Algorithm Implementation/Mathematics/Extended Euclidean algorithm <https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm>`__ on `Wikibooks <https://en.wikibooks.org>`__, and
-    * `Euclidean algorithm <https://en.wikipedia.org/wiki/Euclidean_algorithm>`__ on `Wikipedia <https://en.wikipedia.org>`__.
+    * `Extended Euclidean Algorithm <https://brilliant.org/wiki/extended-euclidean-algorithm/>`__
+       on `Brilliant.org <https://brilliant.org>`__,
+    * `Modular inverse <https://rosettacode.org/wiki/Modular_inverse>`__
+       on `Rosetta Code <https://rosettacode.org>`__,
+    * `Algorithm Implementation/Mathematics/Extended Euclidean algorithm <https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm>`__
+      on `Wikibooks <https://en.wikibooks.org>`__, and
+    * `Euclidean algorithm <https://en.wikipedia.org/wiki/Euclidean_algorithm>`__
+      on `Wikipedia <https://en.wikipedia.org>`__.
 
     >>> egcd(1, 1)
     (1, 0, 1)
