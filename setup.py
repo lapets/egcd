@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setup(
     name="egcd",
-    version="0.2.0",
+    version="0.3.0",
     packages=["egcd",],
     install_requires=[],
     license="MIT",
@@ -16,6 +16,4 @@ setup(
                 "native implementation of the extended Euclidean algorithm.",
     long_description=long_description,
     long_description_content_type="text/x-rst",
-    test_suite="nose.collector",
-    tests_require=["nose"],
 )

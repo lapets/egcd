@@ -41,19 +41,19 @@ The function ``egcd`` is an efficient implementation of the `extended Euclidean 
 
 Testing and Conventions
 -----------------------
-All unit tests are executed and their coverage is measured when using `nose <https://nose.readthedocs.io/>`_ (see ``setup.cfg`` for configuration details)::
+All unit tests are executed and their coverage is measured when using `pytest <https://docs.pytest.org/>`__ (see ``setup.cfg`` for configuration details)::
 
-    python -m pip install nose coverage
-    nosetests --cover-erase
+    python -m pip install pytest pytest-cov
+    python -m pytest
 
-Alternatively, all unit tests are included in the module itself and can be executed using `doctest <https://docs.python.org/3/library/doctest.html>`_::
+Alternatively, all unit tests are included in the module itself and can be executed using `doctest <https://docs.python.org/3/library/doctest.html>`__::
 
     python egcd/egcd.py -v
 
-Style conventions are enforced using `Pylint <https://www.pylint.org/>`_::
+Style conventions are enforced using `Pylint <https://www.pylint.org/>`__::
 
     python -m pip install pylint
-    pylint egcd
+    python -m pylint egcd
 
 Contributions
 -------------
