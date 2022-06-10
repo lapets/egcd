@@ -9,14 +9,15 @@ import doctest
 def egcd(b: int, n: int) -> Tuple[int, int, int]:
     # pylint: disable=C0301 # Accommodates long link URL.
     """
-    Given two integers ``(b, n)``, returns ``(gcd(b, n), a, m)`` such that
+    Given two integers ``b`` and ``n``, returns ``(gcd(b, n), a, m)`` such that
     ``a*b + n*m = gcd(b, n)``.
 
     This implementation is adapted from the sources below:
-    * `<https://brilliant.org/wiki/extended-euclidean-algorithm/>`__,
-    * `<https://rosettacode.org/wiki/Modular_inverse>`__,
-    * `<https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm>`__, and
-    * `<https://en.wikipedia.org/wiki/Euclidean_algorithm>`__.
+
+    * `Extended Euclidean Algorithm <https://brilliant.org/wiki/extended-euclidean-algorithm/>`__ on `Brilliant.org <https://brilliant.org>`__,
+    * `Modular inverse <https://rosettacode.org/wiki/Modular_inverse>`__ on `Rosetta Code <https://rosettacode.org>`__,
+    * `Algorithm Implementation/Mathematics/Extended Euclidean algorithm <https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm>`__ on `Wikibooks <https://en.wikibooks.org>`__, and
+    * `Euclidean algorithm <https://en.wikipedia.org/wiki/Euclidean_algorithm>`__ on `Wikipedia <https://en.wikipedia.org>`__.
 
     >>> egcd(1, 1)
     (1, 0, 1)
@@ -27,7 +28,8 @@ def egcd(b: int, n: int) -> Tuple[int, int, int]:
     >>> egcd(pow(2, 50), pow(3, 50))
     (1, -260414429242905345185687, 408415383037561)
 
-    The example below tests the behavior of this function over a range of inputs.
+    The example below tests the behavior of this function over a range of
+    inputs using the built-in :obj:`gcd` function.
 
     >>> from math import gcd
     >>> checks = []
