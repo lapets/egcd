@@ -4,8 +4,8 @@ with open('README.rst', 'r') as fh:
     long_description = fh.read().replace('.. include:: toc.rst\n\n', '')
 
 # The lines below can be parsed by ``docs/conf.py``.
-name = "egcd"
-version = "0.3.0"
+name = 'egcd'
+version = '0.3.0'
 
 setup(
     name=name,
