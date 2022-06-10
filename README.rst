@@ -14,8 +14,8 @@ Easy-to-import Python module with a basic, efficient, native implementation of t
    :target: https://github.com/lapets/egcd/actions/workflows/lint-test-cover.yml
    :alt: GitHub Actions status.
 
-.. |coveralls| image:: https://coveralls.io/repos/github/lapets/egcd/badge.svg?branch=master
-   :target: https://coveralls.io/github/lapets/egcd?branch=master
+.. |coveralls| image:: https://coveralls.io/repos/github/lapets/egcd/badge.svg?branch=main
+   :target: https://coveralls.io/github/lapets/egcd?branch=main
    :alt: Coveralls test coverage summary.
 
 Package Installation and Usage
