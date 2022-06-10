@@ -29,7 +29,7 @@ def egcd(b: int, n: int) -> Tuple[int, int, int]:
     (1, -260414429242905345185687, 408415383037561)
 
     The example below tests the behavior of this function over a range of
-    inputs using the built-in :obj:`gcd` function.
+    inputs using the built-in :obj:`math.gcd` function.
 
     >>> from math import gcd
     >>> checks = []
