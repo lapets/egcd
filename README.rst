@@ -4,11 +4,15 @@ egcd
 
 Easy-to-import Python module with a basic, efficient, native implementation of the extended Euclidean algorithm.
 
-|pypi| |actions| |coveralls|
+|pypi| |readthedocs| |actions| |coveralls|
 
 .. |pypi| image:: https://badge.fury.io/py/egcd.svg
    :target: https://badge.fury.io/py/egcd
    :alt: PyPI version and link.
+
+.. |readthedocs| image:: https://readthedocs.org/projects/egcd/badge/?version=latest
+   :target: https://egcd.readthedocs.io/en/latest/?badge=latest
+   :alt: Read the Docs documentation status.
 
 .. |actions| image:: https://github.com/lapets/egcd/workflows/lint-test-cover/badge.svg
    :target: https://github.com/lapets/egcd/actions/workflows/lint-test-cover.yml
