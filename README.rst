@@ -20,7 +20,7 @@ Easy-to-import Python module with a basic, efficient, native implementation of t
 
 Package Installation and Usage
 ------------------------------
-The package is available on `PyPI <https://pypi.org/project/egcd/>`_::
+The package is available on `PyPI <https://pypi.org/project/egcd>`__::
 
     python -m pip install egcd
 
@@ -28,7 +28,7 @@ The library can be imported in the usual way::
 
     from egcd import egcd
 
-The function ``egcd`` is an efficient implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`_. It accepts two integer inputs ``b`` and ``n``, returning a tuple of the form ``(gcd(b, n), a, m)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`_ ``(a * b) + (n * m) = gcd(b, n)``::
+The function ``egcd`` is an efficient implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__. It accepts two integer inputs ``b`` and ``n``, returning a tuple of the form ``(gcd(b, n), a, m)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * b) + (n * m) = gcd(b, n)``::
 
     >>> egcd(1, 1)
     (1, 0, 1)
@@ -41,7 +41,7 @@ The function ``egcd`` is an efficient implementation of the `extended Euclidean 
 
 Testing and Conventions
 -----------------------
-All unit tests are executed and their coverage is measured when using `pytest <https://docs.pytest.org/>`__ (see ``setup.cfg`` for configuration details)::
+All unit tests are executed and their coverage is measured when using `pytest <https://docs.pytest.org>`__ (see ``setup.cfg`` for configuration details)::
 
     python -m pip install pytest pytest-cov
     python -m pytest
@@ -50,15 +50,15 @@ Alternatively, all unit tests are included in the module itself and can be execu
 
     python egcd/egcd.py -v
 
-Style conventions are enforced using `Pylint <https://www.pylint.org/>`__::
+Style conventions are enforced using `Pylint <https://www.pylint.org>`__::
 
     python -m pip install pylint
     python -m pylint egcd
 
 Contributions
 -------------
-In order to contribute to the source code, open an issue or submit a pull request on the `GitHub page <https://github.com/lapets/egcd>`_ for this library.
+In order to contribute to the source code, open an issue or submit a pull request on the `GitHub page <https://github.com/lapets/egcd>`__ for this library.
 
 Versioning
 ----------
-Beginning with version 0.1.0, the version number format for this library and the changes to the library associated with version number increments conform with `Semantic Versioning 2.0.0 <https://semver.org/#semantic-versioning-200>`_.
+Beginning with version 0.1.0, the version number format for this library and the changes to the library associated with version number increments conform with `Semantic Versioning 2.0.0 <https://semver.org/#semantic-versioning-200>`__.

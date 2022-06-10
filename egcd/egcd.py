@@ -7,16 +7,16 @@ from typing import Tuple
 import doctest
 
 def egcd(b: int, n: int) -> Tuple[int, int, int]:
-    # pylint: disable=C0301
+    # pylint: disable=C0301 # Accommodates long link URL.
     """
     Given two integers ``(b, n)``, returns ``(gcd(b, n), a, m)`` such that
     ``a*b + n*m = gcd(b, n)``.
 
     This implementation is adapted from the sources below:
-    * ``https://brilliant.org/wiki/extended-euclidean-algorithm/``
-    * ``https://rosettacode.org/wiki/Modular_inverse``
-    * ``https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm``
-    * ``https://en.wikipedia.org/wiki/Euclidean_algorithm``
+    * `<https://brilliant.org/wiki/extended-euclidean-algorithm/>`__,
+    * `<https://rosettacode.org/wiki/Modular_inverse>`__,
+    * `<https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm>`__, and
+    * `<https://en.wikipedia.org/wiki/Euclidean_algorithm>`__.
 
     >>> egcd(1, 1)
     (1, 0, 1)
@@ -26,6 +26,9 @@ def egcd(b: int, n: int) -> Tuple[int, int, int]:
     (2, 2437250447493, -2431817869532)
     >>> egcd(pow(2, 50), pow(3, 50))
     (1, -260414429242905345185687, 408415383037561)
+
+    The example below tests the behavior of this function over a range of inputs.
+
     >>> from math import gcd
     >>> checks = []
     >>> for (b, n) in [(b, n) for b in range(200) for n in range(200)]:
