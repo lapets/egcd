@@ -72,9 +72,3 @@ html_theme_options = {
     'navigation_depth': 1,
     'titles_only': True
 }
-
-
-# -- Auto-generation of requirements file ------------------------------------
-
-with open('docs/requirements.txt', 'w') as file:
-    file.write('sphinx~=4.2.0\nsphinx-rtd-theme~=1.0.0\n')

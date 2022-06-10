@@ -14,8 +14,8 @@ Easy-to-import Python module with a basic, efficient, native implementation of t
    :target: https://egcd.readthedocs.io/en/latest/?badge=latest
    :alt: Read the Docs documentation status.
 
-.. |actions| image:: https://github.com/lapets/egcd/workflows/lint-test-cover/badge.svg
-   :target: https://github.com/lapets/egcd/actions/workflows/lint-test-cover.yml
+.. |actions| image:: https://github.com/lapets/egcd/workflows/lint-test-cover-docs/badge.svg
+   :target: https://github.com/lapets/egcd/actions/workflows/lint-test-cover-docs.yml
    :alt: GitHub Actions status.
 
 .. |coveralls| image:: https://coveralls.io/repos/github/lapets/egcd/badge.svg?branch=main
