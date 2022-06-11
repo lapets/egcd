@@ -24,7 +24,7 @@ Easy-to-import Python module with a basic, efficient, native implementation of t
 
 Installation and Usage
 ----------------------
-The package is available on `PyPI <https://pypi.org/project/egcd>`__::
+This library is available as a `package on PyPI <https://pypi.org/project/egcd>`__::
 
     python -m pip install egcd
 
@@ -32,7 +32,10 @@ The library can be imported in the usual way::
 
     from egcd import egcd
 
-The function ``egcd`` is an efficient implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__. It accepts two integer inputs ``b`` and ``n``, returning a tuple of the form ``(gcd(b, n), a, m)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * b) + (n * m) == gcd(b, n)``::
+.. |egcd| replace:: ``egcd``
+.. _egcd: https://egcd.readthedocs.io/en/latest/_source/egcd.html#egcd.egcd.egcd
+
+The function |egcd|_ is an efficient implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__. It accepts two integer inputs ``b`` and ``n``, returning a tuple of the form ``(gcd(b, n), a, m)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * b) + (n * m) == gcd(b, n)``::
 
     >>> egcd(1, 1)
     (1, 0, 1)
