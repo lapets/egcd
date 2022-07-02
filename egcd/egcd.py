@@ -1,5 +1,5 @@
 """
-Easy-to-import Python module with a basic, efficient, native implementation
+Easy-to-import library with a basic, efficient, pure-Python implementation
 of the extended Euclidean algorithm.
 """
 from __future__ import annotations
