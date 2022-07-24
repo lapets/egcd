@@ -1,6 +1,6 @@
 [project]
 name = "egcd"
-version = "0.4.0"
+version = "0.4.1"
 description = """\
     Easy-to-import library with a basic, efficient, pure-Python \
     implementation of the extended Euclidean algorithm.\
@@ -34,14 +34,13 @@ coveralls = [
     "coveralls~=3.3.1"
 ]
 publish = [
+    "build~=0.8",
     "twine~=4.0"
 ]
 
 [build-system]
 requires = [
-    "build~=0.8",
-    "setuptools~=62.0",
-    "wheel~=0.37"
+    "setuptools~=62.0"
 ]
 build-backend = "setuptools.build_meta"
 
