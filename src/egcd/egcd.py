@@ -7,7 +7,7 @@ from typing import Tuple
 import doctest
 
 def egcd(b: int, n: int) -> Tuple[int, int, int]:
-    # pylint: disable=C0301 # Accommodates long link URLs.
+    # pylint: disable=line-too-long # Accommodate long link URLs on docstring.
     """
     Given two integers ``b`` and ``n``, returns ``(gcd(b, n), a, m)`` such that
     ``a*b + n*m == gcd(b, n)``.
