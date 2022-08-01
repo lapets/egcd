@@ -36,7 +36,7 @@ Examples
 ^^^^^^^^
 
 .. |egcd| replace:: ``egcd``
-.. _egcd: https://egcd.readthedocs.io/en/0.4.1/_source/egcd.html#egcd.egcd.egcd
+.. _egcd: https://egcd.readthedocs.io/en/0.4.3/_source/egcd.html#egcd.egcd.egcd
 
 The function |egcd|_ is an efficient implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__. It accepts two integer inputs ``b`` and ``n``, returning a tuple of the form ``(gcd(b, n), a, m)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * b) + (n * m) == gcd(b, n)``::
 
