@@ -51,5 +51,5 @@ def egcd(b: int, n: int) -> Tuple[int, int, int]:
         (y0, y1) = (y1, y0 - q * y1)
     return (b, x0, y0)
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     doctest.testmod() # pragma: no cover
