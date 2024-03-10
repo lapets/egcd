@@ -2,7 +2,9 @@
 egcd
 ====
 
-Easy-to-import library with a basic, efficient, pure-Python implementation of the extended Euclidean algorithm.
+Pure-Python
+`extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__
+implementation that supports any number of integer arguments.
 
 |pypi| |readthedocs| |actions| |coveralls|
 
@@ -42,7 +44,10 @@ Examples
 .. |egcd| replace:: ``egcd``
 .. _egcd: https://egcd.readthedocs.io/en/0.6.0/_source/egcd.html#egcd.egcd.egcd
 
-The function |egcd|_ is an efficient implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__. It accepts two integer inputs ``b`` and ``n``, returning a tuple of the form ``(gcd(b, n), a, m)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * b) + (n * m) == gcd(b, n)``:
+.. |math_gcd| replace:: ``math_gcd``
+.. _math_gcd: https://docs.python.org/3/library/math.html#math.gcd
+
+The function |egcd|_ is a pure-Python implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__ that extends the functionality and interface of the built-in |math_gcd|_ function. When it is supplied two integer arguments ``a`` and ``b``, it returns a tuple of the form ``(g, s, t)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * s) + (b * t) == g``:
 
 .. code-block:: python
 
@@ -54,6 +59,26 @@ The function |egcd|_ is an efficient implementation of the `extended Euclidean a
     (2, 2437250447493, -2431817869532)
     >>> egcd(pow(2, 50), pow(3, 50))
     (1, -260414429242905345185687, 408415383037561)
+
+However, any number of integer arguments can be supplied. When no arguments are supplied, the result is ``(0,)`` (just as ``math.gcd()`` evaluates to ``0``). In all other cases, the result contains the greatest common divisor of all the supplied integers and the coefficients of the generalized form of the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__:
+
+.. code-block:: python
+
+    >>> egcd(2, 4, 3, 9)
+    (1, -1, 0, 1, 0)
+    >>> 1 == ((-1) * 2) + (0 * 4) + (1 * 3) + (0 * 9)
+    1
+
+A succinct way to extract the greatest common divisor and the coefficients is to take advantage of Python's support for iterable unpacking via the `asterisk <https://docs.python.org/3/reference/expressions.html#expression-lists>`__ notation:
+
+.. code-block:: python
+
+    >>> bs = (26, 16, 34)
+    >>> (g, *cs) = egcd(*bs)
+    >>> (g, cs)
+    (2, [-3, 5, 0])
+    >>> g == sum(c * b for (c, b) in zip(cs, bs))
+    True
 
 Development
 -----------

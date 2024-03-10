@@ -2,8 +2,8 @@
 name = "egcd"
 version = "0.6.0"
 description = """\
-    Easy-to-import library with a basic, efficient, pure-Python \
-    implementation of the extended Euclidean algorithm.\
+    Pure-Python extended Euclidean algorithm implementation \
+    that supports any number of integer arguments.\
     """
 license = {text = "MIT"}
 authors = [
