@@ -55,6 +55,18 @@ def egcd(*integers: int) -> Tuple[int, ...]:
     >>> 1 == ((-1) * 2) + (0 * 4) + (1 * 3) + (0 * 9)
     True
 
+    This function conforms to the behavior of :obj:`math.gcd` when all arguments
+    are ``0`` (returning ``0`` as the greatest common divisor) or when any of the
+    arguments are negative (returning the largest *positive* integer that is a
+    divisor of all of the arguments).
+
+    >>> egcd(0, 0)
+    (0, 1, 0)
+    >>> egcd(-25, -15)
+    (5, 1, -2)
+    >>> egcd(-9, 6, -33, -3)
+    (3, 0, 0, 0, -1)
+
     To conform to the behavior of :obj:`math.gcd` in its base cases (in Python
     3.9 and higher), this function returns ``(0,)`` when there are no arguments
     and the sole argument paired with the coefficient ``1`` when only one
@@ -96,7 +108,7 @@ def egcd(*integers: int) -> Tuple[int, ...]:
     >>> from math import gcd
     >>> from itertools import product
     >>> checks = []
-    >>> for (a, b) in product(range(1000), range(1000)):
+    >>> for (a, b) in product(range(-1000, 1000), range(-1000, 1000)):
     ...    (g, s, t) = egcd(a, b)
     ...    assert(g == gcd(a, b))
     ...    assert(g == (a * s) + (b * t))
@@ -109,7 +121,7 @@ def egcd(*integers: int) -> Tuple[int, ...]:
     >>> gcd_ = lambda *bs: reduce(gcd, bs, bs[0]) # Backwards-compatible.
     >>> checks = []
     >>> for k in range(1, 5):
-    ...    for bs in product(*([range(100 // k)] * k)):
+    ...    for bs in product(*([range(-50 // k, 50 // k)] * k)):
     ...        (g, *cs) = egcd(*bs)
     ...        assert(g == gcd_(*bs))
     ...        assert(g == sum(c * b for (c, b) in zip(cs, bs)))
@@ -117,7 +129,7 @@ def egcd(*integers: int) -> Tuple[int, ...]:
     if len(integers) == 0:
         return (0,)
 
-    (g, cs) = (integers[0], (1,)) # Running accumulators for the results.
+    (g, cs) = (integers[0], [1]) # Running accumulators for the results.
     for (i, a) in enumerate(integers):
         if not isinstance(a, int): # Check type of all arguments.
             raise TypeError(
@@ -138,9 +150,12 @@ def egcd(*integers: int) -> Tuple[int, ...]:
         # Assign the result of the two-argument algorithm to the running
         # accumulators.
         (g, s, t) = (s, x0, y0)
-        cs = tuple(c * s for c in cs) + (t,)
+        cs = [c * s for c in cs] + [t]
 
-    return (g,) + cs
+    # To conform to the behavior of ``math.gcd``, always return the greatest
+    # common divisor as a nonnegative integer (adjusting the coefficients
+    # accordingly, if necessary).
+    return tuple([abs(g)] + ([-c for c in cs] if g < 0 else cs))
 
 if __name__ == '__main__':
     doctest.testmod() # pragma: no cover
