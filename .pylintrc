@@ -248,7 +248,7 @@ variable-naming-style=snake_case
 # Regular expression matching correct variable names. Overrides variable-
 # naming-style. If left empty, variable names will be checked with the set
 # naming style.
-#variable-rgx=
+variable-rgx=^(_?)[a-z][a-z0-9]*(_[a-z0-9]+)*(_?)(_?)$
 
 
 [CLASSES]
@@ -428,9 +428,7 @@ disable=raw-checker-failed,
         suppressed-message,
         useless-suppression,
         deprecated-pragma,
-        use-symbolic-message-instead,
-        use-implicit-booleaness-not-comparison-to-string,
-        use-implicit-booleaness-not-comparison-to-zero
+        use-symbolic-message-instead
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option
@@ -467,11 +465,6 @@ max-nested-blocks=5
 # it will be considered as an explicit return statement and no message will be
 # printed.
 never-returning-functions=sys.exit,argparse.parse_error
-
-# Let 'consider-using-join' be raised when the separator to join on would be
-# non-empty (resulting in expected fixes of the type: ``"- " + " -
-# ".join(items)``)
-suggest-join-with-non-empty-separator=yes
 
 
 [REPORTS]
