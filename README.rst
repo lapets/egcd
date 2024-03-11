@@ -4,11 +4,11 @@ egcd
 
 Pure-Python
 `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__
-implementation that supports any number of integer arguments.
+implementation that accepts any number of integer arguments.
 
 |pypi| |readthedocs| |actions| |coveralls|
 
-.. |pypi| image:: https://badge.fury.io/py/egcd.svg
+.. |pypi| image:: https://badge.fury.io/py/egcd.svg#
    :target: https://badge.fury.io/py/egcd
    :alt: PyPI version and link.
 
@@ -16,7 +16,7 @@ implementation that supports any number of integer arguments.
    :target: https://egcd.readthedocs.io/en/latest/?badge=latest
    :alt: Read the Docs documentation status.
 
-.. |actions| image:: https://github.com/lapets/egcd/workflows/lint-test-cover-docs/badge.svg
+.. |actions| image:: https://github.com/lapets/egcd/workflows/lint-test-cover-docs/badge.svg#
    :target: https://github.com/lapets/egcd/actions/workflows/lint-test-cover-docs.yml
    :alt: GitHub Actions status.
 
@@ -42,7 +42,7 @@ Examples
 ^^^^^^^^
 
 .. |egcd| replace:: ``egcd``
-.. _egcd: https://egcd.readthedocs.io/en/0.6.0/_source/egcd.html#egcd.egcd.egcd
+.. _egcd: https://egcd.readthedocs.io/en/1.0.0/_source/egcd.html#egcd.egcd.egcd
 
 .. |math_gcd| replace:: ``math_gcd``
 .. _math_gcd: https://docs.python.org/3/library/math.html#math.gcd

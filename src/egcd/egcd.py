@@ -1,7 +1,7 @@
 """
 Pure-Python
 `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__
-implementation that supports any number of integer arguments.
+implementation that accepts any number of integer arguments.
 """
 from __future__ import annotations
 from typing import Tuple

@@ -1,9 +1,9 @@
 [project]
 name = "egcd"
-version = "0.6.0"
+version = "1.0.0"
 description = """\
     Pure-Python extended Euclidean algorithm implementation \
-    that supports any number of integer arguments.\
+    that accepts any number of integer arguments.\
     """
 license = {text = "MIT"}
 authors = [
@@ -21,14 +21,14 @@ Documentation = "https://egcd.readthedocs.io"
 docs = [
     "toml~=0.10.2",
     "sphinx~=5.0",
-    "sphinx-rtd-theme~=1.0.0"
+    "sphinx-rtd-theme~=1.1.0"
 ]
 test = [
-    "pytest~=7.2",
+    "pytest~=8.0",
     "pytest-cov~=4.0"
 ]
 lint = [
-    "pylint~=2.17.0"
+    "pylint~=3.1.0"
 ]
 coveralls = [
     "coveralls~=3.3.1"
@@ -40,7 +40,7 @@ publish = [
 
 [build-system]
 requires = [
-    "setuptools>=67.6"
+    "setuptools>=68.0"
 ]
 build-backend = "setuptools.build_meta"
 
