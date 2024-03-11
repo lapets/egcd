@@ -44,10 +44,10 @@ Examples
 .. |egcd| replace:: ``egcd``
 .. _egcd: https://egcd.readthedocs.io/en/1.0.0/_source/egcd.html#egcd.egcd.egcd
 
-.. |math_gcd| replace:: ``math_gcd``
+.. |math_gcd| replace:: ``math.gcd``
 .. _math_gcd: https://docs.python.org/3/library/math.html#math.gcd
 
-The function |egcd|_ is a pure-Python implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__ that extends the functionality and interface of the built-in |math_gcd|_ function. When it is supplied two integer arguments ``a`` and ``b``, it returns a tuple of the form ``(g, s, t)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * s) + (b * t) == g``:
+The function |egcd|_ is a pure-Python implementation of the `extended Euclidean algorithm <https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm>`__ that can be viewed as an expansion of the functionality and interface of the built-in |math_gcd|_ function. When it is supplied two integer arguments ``a`` and ``b``, it returns a tuple of the form ``(g, s, t)`` where the three integers in the tuple satisfy the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__ ``(a * s) + (b * t) == g``:
 
 .. code-block:: python
 
@@ -60,7 +60,7 @@ The function |egcd|_ is a pure-Python implementation of the `extended Euclidean 
     >>> egcd(pow(2, 50), pow(3, 50))
     (1, -260414429242905345185687, 408415383037561)
 
-However, any number of integer arguments can be supplied. When no arguments are supplied, the result is ``(0,)`` (just as ``math.gcd()`` evaluates to ``0``). In all other cases, the result contains the greatest common divisor of all the supplied integers and the coefficients of the generalized form of the `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__:
+However, any number of integer arguments can be supplied. When no arguments are supplied, the result is ``(0,)`` (just as the expression ``math.gcd()`` evaluates to ``0`` in Python 3.9 and higher). In all other cases, the result contains the `greatest common divisor <https://en.wikipedia.org/wiki/Greatest_common_divisor>`__ of all the supplied integers and the coefficients of the generalized form of the associated `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__:
 
 .. code-block:: python
 
