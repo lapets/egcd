@@ -99,11 +99,12 @@ def egcd(*integers: int) -> Tuple[int, ...]:
     The more complex example below tests the behavior of this function over
     a range of input sequences.
 
+    >>> from functools import reduce
     >>> checks = []
     >>> for k in range(1, 5):
     ...    for bs in product(*([range(100 // k)] * k)):
     ...        (g, *cs) = egcd(*bs)
-    ...        assert(g == gcd(*bs))
+    ...        assert(g == reduce(gcd, bs)) # Backwards-compatible ``gcd`` use.
     ...        assert(g == sum(c * b for (c, b) in zip(cs, bs)))
     """
     if len(integers) == 0:
