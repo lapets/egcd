@@ -69,7 +69,7 @@ However, any number of integer arguments can be supplied. When no arguments are 
     >>> 1 == ((-1) * 2) + (0 * 4) + (1 * 3) + (0 * 9)
     1
 
-A succinct way to extract the greatest common divisor and the coefficients is to take advantage of Python's support for iterable unpacking via the `asterisk <https://docs.python.org/3/reference/expressions.html#expression-lists>`__ notation:
+A succinct way to extract the greatest common divisor and the coefficients is to take advantage of Python's support for `iterable unpacking <https://peps.python.org/pep-3132/>`__ via the `asterisk <https://docs.python.org/3/reference/expressions.html#expression-lists>`__ notation:
 
 .. code-block:: python
 

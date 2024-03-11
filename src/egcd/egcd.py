@@ -42,7 +42,7 @@ def egcd(*integers: int) -> Tuple[int, ...]:
 
     This function can accept any number of integer arguments (as the built-in
     function :obj:`math.gcd` does in Python 3.9 and higher). In general,
-    the greatest common divisor of *all* of the arguments is returned (along
+    the greatest common divisor of *all* the arguments is returned (along
     with coefficients that satisfy the generalized form of the associated
     `identity <https://en.wikipedia.org/wiki/B%C3%A9zout%27s_identity>`__).
 
@@ -58,7 +58,7 @@ def egcd(*integers: int) -> Tuple[int, ...]:
     This function conforms to the behavior of :obj:`math.gcd` when all arguments
     are ``0`` (returning ``0`` as the greatest common divisor) or when any of the
     arguments are negative (returning the largest *positive* integer that is a
-    divisor of all of the arguments).
+    divisor of all the arguments).
 
     >>> egcd(0, 0)
     (0, 1, 0)
