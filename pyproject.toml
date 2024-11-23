@@ -1,6 +1,6 @@
 [project]
 name = "egcd"
-version = "1.0.0"
+version = "2.0.0"
 description = """\
     Pure-Python extended Euclidean algorithm implementation \
     that accepts any number of integer arguments.\
@@ -24,14 +24,17 @@ docs = [
     "sphinx-rtd-theme~=1.1.0"
 ]
 test = [
-    "pytest~=7.4",
-    "pytest-cov~=4.0"
+    "pytest~=7.4; python_version < '3.12'",
+    "pytest~=8.2; python_version >= '3.12'",
+    "pytest-cov~=4.1; python_version < '3.12'",
+    "pytest-cov~=5.0; python_version >= '3.12'"
 ]
 lint = [
-    "pylint~=2.17"
+    "pylint~=2.17.0; python_version < '3.12'",
+    "pylint~=3.2.0; python_version >= '3.12'"
 ]
 coveralls = [
-    "coveralls~=3.3.1"
+    "coveralls~=4.0"
 ]
 publish = [
     "build~=0.10",
