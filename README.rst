@@ -40,7 +40,7 @@ Examples
 ^^^^^^^^
 
 .. |egcd| replace:: ``egcd``
-.. _egcd: https://egcd.readthedocs.io/en/2.0.0/_source/egcd.html#egcd.egcd.egcd
+.. _egcd: https://egcd.readthedocs.io/en/2.0.1/_source/egcd.html#egcd.egcd.egcd
 
 .. |math_gcd| replace:: ``math.gcd``
 .. _math_gcd: https://docs.python.org/3/library/math.html#math.gcd
