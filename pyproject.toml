@@ -1,6 +1,6 @@
 [project]
 name = "egcd"
-version = "2.0.1"
+version = "2.0.2"
 description = """\
     Pure-Python extended Euclidean algorithm implementation \
     that accepts any number of integer arguments.\
